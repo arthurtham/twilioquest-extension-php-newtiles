@@ -1,0 +1,85 @@
+- const worldState = getState('oss_elephpantWorldState');
+- const ele = worldState.utilityDock4.conversations.ele;
+
+// Responses
+mixin can_you_tell_me_more
+  response#can_you_tell_me_more.
+    Can you tell me more?
+
+
+    else if worldState.utilityDock4.conversations.ele.current == "barracks_chest"
+      statement.
+        Forgive me, dear Colonist Technician, I did not have access to the data which would have informed me that you were newly awakened. Thank you, for claiming a chest and barracks, but feel free to relocate should you need, and I will endeavor to assist you as you get your bearings!
+    else if worldState.utilityDock4.conversations.ele.current == "cryo_chamber"
+      statement.
+        Thank you, Colonist Technician, you have become stepped up to help so quickly and capably!
+    else if worldState.utilityDock4.conversations.ele.current == "riverway_fountain"
+      statement.
+        Thank you, Colonist Technician, you have become stepped up to help so quickly and capably!
+mixin whois
+  response#whois.
+    My dear Colonist Technician, I am your guide, your servant, your protector, I am ELE-AI-42 the AI charged with keeping you and all of our other precious Colonists alive, healthy, thriving, and ready for the day when we have found and terraformed our new home world!
+
+conversation(display_name="ELE-AI-42")
+if lastResponse === "can_you_tell_me_more"
+  statement.
+    My dear, Colonist Technician, I only wish that I could, but unfortunately I am stretched quite beyond capacity at the moment with all these, I promise quite minor, issues. Perhaps you could help find and fix these pesky bugs...
+else
+  case ele.current
+    when "dock_welcome"
+      statement.
+        Welcome back, Colonist Technician! Unfortunately, we are experiencing some very minor systems irregularities which make it impossible for me to identify you at this time. I'm sure you'll make your way in without difficulty!
+      responses
+        +can_you_tell_me_more
+
+    when "barracks_welcome"
+      statement.
+        Excellent, excellent, Colonist Technician! I'm so pleased you've made it inside safely. Do make yourself at home -- this is your home, after-all!
+      responses
+        +can_you_tell_me_more
+
+    when "barracks_internal"
+      statement.
+        This area, Utility Dock 4, has minimal barracks as this is section of the ship is designated for survey missions; which, only require a small team of Colonist Scientists to coordinate the many probes and satellites we have or can produce aboard.
+      responses
+        +can_you_tell_me_more
+
+    when "barracks_chest"
+      statement.
+        Forgive me, dear Colonist Technician, I did not have access to the data which would have informed me that you were newly awakened. Thank you, for claiming a chest and barracks, but feel free to relocate should you need, and I will endeavor to assist you as you get your bearings!
+      responses
+        +can_you_tell_me_more
+
+    when "cryo_welcome"
+      statement.
+        You will no doubt be proud to learn that even while we are tracking down these little irregularities, our cryo technology is so well maintained that zero errors have been detected in these systems.
+      responses
+        +can_you_tell_me_more
+
+    when "cryo_internal"
+      statement.
+        Our many brave Colonists remain safely in cryogenic stasis, awaiting the voyage or our future new home's need for them.
+      responses
+        +can_you_tell_me_more
+
+    when "cryo_chamber"
+      statement.
+        Thank you, Colonist Technician, you have become stepped up to help so quickly and capably!
+      responses
+        +can_you_tell_me_more
+
+    when "riverway_fountain"
+      statement.
+        Thank you, Colonist Technician, you have become stepped up to help so quickly and capably!
+      responses
+        +can_you_tell_me_more
+
+    default
+      statement.
+        I don't know what to say!
+      responses
+        +can_you_tell_me_more
+
+// Flush world state changes, if any
+- worldState.utilityDock4.conversations.ele = ele;
+- setState('oss_elephpantWorldState.utilityDock4', worldState);

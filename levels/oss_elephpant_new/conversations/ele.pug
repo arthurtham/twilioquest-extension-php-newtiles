@@ -1,0 +1,53 @@
+- const worldState = getState('oss_elephpantWorldState');
+// Responses
+mixin tell_me_more
+  response#tell_me_more.
+    Can you tell me more?
+
+conversation(display_name="ELE-AI")
+  case lastResponse
+    when "tell_me_more"
+      statement#more.
+        My dear Colonist Technician, I only wish that I could. But unfortunately I am stretched quite beyond capacity at the moment with all these, I promise quite minor, issues.
+        <br/><br/>
+        Perhaps if you could help find and fix these pesky bugs...
+      responses
+
+    default
+      if worldState.conversations.current == "barracks_welcome"
+        statement.
+          Excellent, excellent, Colonist Technician! I'm so pleased you've made it inside safely. Do make yourself at home - this is your home, after all!
+      else if worldState.conversations.current == "barracks_internal"
+        statement.
+          This area, Utility Dock 4, has minimal barracks as this section of the ship is designated for survey missions.
+          <br/><br/>
+          Survey missions only require a small team of Colonist Scientists and Technicians to coordinate and maintain the many probes and satellites we have or can produce aboard.
+      else if worldState.conversations.current == "cryo_welcome"
+        statement.
+          You will no doubt be proud to learn that even while we are tracking down these little irregularities, our cryo technology is so well maintained that zero errors have been detected in these systems.
+      else if worldState.conversations.current == "cryo_internal"
+        statement.
+          Our many brave Colonists remain safely in cryogenic stasis, awaiting the end of our voyage, or an urgent need for their unique contributions.
+      else if worldState.conversations.current == "cryo_arm"
+        statement.
+          This is the arm of this cryo bay which extends beyond the main revolving gravity loop.
+          <br/><br/>
+          Our cryo arms are also an essential part of our onboard temperature control and provide the physical structure necessary for our engines to fire at a safe distance from other parts of the ship.
+      else if worldState.conversations.current == "riverway_welcome"
+        statement.
+          I'm sure you'll have missed our riverway. It is quite a privilege to work on such a unique ship!
+          <br/><br/>
+          I do hope you'll enjoy your time in the gardens.
+      else if worldState.conversations.current == "riverway_bridge"
+        statement.
+          Please be careful, Colonist Technician, when enjoying our passthrough views in the river.
+          <br/><br/>
+          The speed of the spin maintaining our artificial gravity can be disorienting after time away!
+      else
+        statement.
+          Welcome, Colonist Technician! Unfortunately, we are experiencing some very minor systems irregularities which make it impossible for me to identify you at this time. I'm sure you'll make your way in without difficulty!
+      responses
+        +tell_me_more
+
+// Flush world state changes, if any
+- setState('oss_elephpantWorldState', worldState);

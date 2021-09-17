@@ -1,0 +1,17 @@
+{
+  "title": "OSS Elephpant: Using break, continue, and return",
+  "description": "Unlock the gate using your understanding of <strong>PHP's break, continue, and return</strong> control structures to solve unexpected output errors.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "scriptPath",
+      "type": "text",
+      "placeholder": "/path/to/your/php/bugFixes.php",
+      "label": "Please copy the path to your software patch below:"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "OSS Elephpant: Your First PHP Script",
+  "description": "Learn to run the <strong>PHP development server</strong> and write your first PHP script!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "scriptName",
+      "type": "text",
+      "placeholder": "index.php",
+      "label": "Please enter the script name the system should run on your localhost:"
+    }
+  ],
+  "rewards": {
+    "xp": 50,
+    "items": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Systems interface: accepting data",
+  "description": "The interface associated with this gate is requesting a path to a script which can accept data.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "codeExecutionPath",
+      "type": "text",
+      "placeholder": "/path/to/your/php/yourFileName.php",
+      "label": "Please copy your execution path below:"
+    }
+  ],
+  "rewards": {
+    "xp": 50,
+    "items": []
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Tiny tunnel",
+  "description": "Fix this workbench by creating a script that takes a URL argument and <strong>makes a Guzzle GET request</strong> to it.",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "scriptPath",
+      "type": "text",
+      "placeholder": "/path/to/script.php",
+      "label": "Copy the path to your script here:"
+    }
+  ],
+  "rewards": {
+    "xp": 100,
+    "items": []
+  }
+}

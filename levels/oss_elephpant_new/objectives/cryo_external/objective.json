@@ -1,0 +1,11 @@
+{
+  "title": "Edge of the world",
+  "description": "The universe doesn't exist beyond this point.",
+  "show_ide": true,
+  "validation_fields": [
+  ],
+  "rewards": {
+    "xp": 200,
+    "items": []
+  }
+}

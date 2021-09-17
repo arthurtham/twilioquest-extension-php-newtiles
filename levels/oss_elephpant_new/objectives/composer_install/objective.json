@@ -1,0 +1,17 @@
+{
+  "title": "OSS Elephpant: Composer Setup",
+  "description": "Learn to use <strong>Composer</strong> to install third-party modules to give your code new powers!",
+  "show_ide": false,
+  "validation_fields": [
+    {
+      "name": "composerExecutionPath",
+      "type": "text",
+      "placeholder": "/usr/local/bin/composer",
+      "label": "Please copy your composer execution path below:"
+    }
+  ],
+  "rewards": {
+    "xp": 50,
+    "items": []
+  }
+}
