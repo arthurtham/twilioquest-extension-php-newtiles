@@ -1,0 +1,18 @@
+{
+  "title": "OSS Elephpant HD",
+  "description": "Updated tileset version of OSS Elephpant",
+  "questTitle": "OSS Elephpant HD",
+  "questDescription": "Updated tileset version of OSS Elephpant",
+  "mission_icon": "mission_icon.png",
+  "is_mission": true,
+  "priority": 10,
+  "backgroundMusic": "hackertheme_104771b",
+  "backgroundEffect": {
+    "key": "vr",
+    "options": {}
+  },
+  "flavorTextOverrides": {
+    "bookshelf": "There's nothing like a good book."
+  },
+  "objectives": ["example_objective", "example_objective2"]
+}
