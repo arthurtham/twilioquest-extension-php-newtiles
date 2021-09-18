@@ -1,10 +1,10 @@
 {
-  "title": "VR Mission Template",
+  "title": "HD OSS HD",
   "description": "This is an example of how to create a 'training mission' for the VR training environment aboard the Fog Owl!",
   "questTitle": "Virtual Reality Training",
   "questDescription": "Example level for VR training. See what's possible!",
   "mission_icon": "mission_icon.png",
-  "is_mission": false,
+  "is_mission": true,
   "priority": 10,
   "backgroundMusic": "hackertheme_104771b",
   "backgroundEffect": {
@@ -14,5 +14,5 @@
   "flavorTextOverrides": {
     "bookshelf": "There's nothing like a good book."
   },
-  "objectives": ["example_objective", "example_objective2"]
+  "objectives": ["example_objective", "example_objective2","install_php"]
 }

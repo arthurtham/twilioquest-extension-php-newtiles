@@ -74,15 +74,15 @@ module.exports = function(event, world) {
   console.log(event); // levelDidLoad
   // console.log(world); //
 
-  /*if (event.name === 'levelDidLoad') {
+  if (event.name === 'levelDidLoad') {
    // reset mission on levelDidLoad for testing
    console.log('reset mission on levelDidLoad for testing');
    completedObjectives = world.getContext('completedObjectives');
    console.log(completedObjectives);
-   world.setState('oss_elephpantWorldState', DEFAULT_MISSION_STATE);
- }*/
+   world.setState('ossHD_elephpantWorldState', DEFAULT_MISSION_STATE);
+ }
 
-  const worldState = world.getState('oss_elephpantWorldState') || DEFAULT_MISSION_STATE;
+  const worldState = world.getState('ossHD_elephpantWorldState') || DEFAULT_MISSION_STATE;
 
   // If the player interacts with an "ELE Terminal", a contextual NPC
   // conversation is triggered based on the current world state
@@ -112,5 +112,5 @@ module.exports = function(event, world) {
     scheduleBlinking(world, worldState);
   }
 
-  world.setState('oss_elephpantWorldState', worldState);
+  world.setState('ossHD_elephpantWorldState', worldState);
 };
