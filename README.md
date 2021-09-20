@@ -1,3 +1,14 @@
+# OSS Elephpant HD Edition
+Project by Arthur Tham
+
+This is a project on recreating the HD version of the OSS Elephpant mission
+in TwilioQuest, using the TwilioQuest Extension Template.
+
+More details TBA
+
+
+---
+
 # TwilioQuest Extension Template
 Interested in creating an extension for TwilioQuest? You've come to the right place! Using this repository as a template, you can create new levels, objectives, characters, and items in TwilioQuest.
 
